@@ -1,0 +1,9 @@
+#Some of my current key bindings
+key_bindings:
+  - {key: NumpadAdd,            mods: Super,                  action: IncreaseFontSize }
+  - {key: NumpadSubtract,       mods: Super,                  action: DecreaseFontSize }
+  - {key: Equals,               mods: Super,                  action: ResetFontSize    }
+  - {key: F11,                                                action: ToggleFullscreen }
+  #F12 bc Super+N doesn't work for me
+  - {key: F12,                                                action: SpawnNewInstance }
+

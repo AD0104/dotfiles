@@ -1,0 +1,87 @@
+env:
+  TERM: xterm-256color
+
+window:
+  title: Alacritty
+  dynamic_title: false
+
+font:
+  normal:
+    family: mononoki NF
+    style: Regular
+
+  bold:
+    family: mononoki NF
+    style: Bold
+
+  italic:
+    family: mononoki NF
+    style: Italic
+
+  bold_italic:
+    family: mononoki NF
+    style: Bold Italic
+  size: 13.5
+
+schemes:
+  dracula:
+    &dracula-dark
+    import:
+      - ~/.config/alacritty/alacritty-themes/alacritty-master/dracula.yml
+  argonaut:
+    &argonaut-dark
+    import:
+      - ~/.config/alacritty/alacritty-themes/argonaut-scheme/argonaut.yml
+
+selection:
+  save_to_clipboard: true
+
+cursor:
+  style:
+    shape: Block
+    blinking: Always
+    blink_interval: 250
+
+mouse:
+  hide_when_typing: false
+
+colors:
+  name: Google (dark)
+  author: Chris Kempson
+  primary:
+    background: "#1d1f21"
+    foreground: "#c5c8c6"
+  cursor:
+    text: "#1d1f21"
+    cursor: "#c5c8c6"
+  normal:
+    black: "#1d1f21"
+    red: "#cc342b"
+    green: "#198844"
+    yellow: "#fba922"
+    blue: "#3971ed"
+    magenta: "#a36ac7"
+    cyan: "#3971ed"
+    white: "#c5c8c6"
+  bright:
+    black: "#969896"
+    red: "#cc342b"
+    green: "#198844"
+    yellow: "#fba922"
+    blue: "#3971ed"
+    magenta: "#a36ac7"
+    cyan: "#3971ed"
+    white: "#ffffff"
+
+key_bindings:
+  - { key: NumpadAdd, mods: Super, action: IncreaseFontSize }
+  - {
+      key: NumpadSubtract,
+      mods: Super,
+      action: DecreaseFontSize
+    }
+  - { key: Equals, mods: Super, action: ResetFontSize }
+  - { key: F11, action: ToggleFullscreen }
+  - { key: F12, action: SpawnNewInstance }
+
+print_events: true
