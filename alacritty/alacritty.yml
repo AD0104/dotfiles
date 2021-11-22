@@ -23,16 +23,6 @@ font:
     style: Bold Italic
   size: 13.5
 
-schemes:
-  dracula:
-    &dracula-dark
-    import:
-      - ~/.config/alacritty/alacritty-themes/alacritty-master/dracula.yml
-  argonaut:
-    &argonaut-dark
-    import:
-      - ~/.config/alacritty/alacritty-themes/argonaut-scheme/argonaut.yml
-
 selection:
   save_to_clipboard: true
 
