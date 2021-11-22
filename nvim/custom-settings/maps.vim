@@ -1,5 +1,6 @@
 let mapleader = " "
 
+"Cut text to + clipboard
 vnoremap <leader>d "+d
 
 nnoremap <leader>So :so %<CR>
@@ -8,15 +9,18 @@ nnoremap <C-s> :w<CR>
 "Copy current line
 nnoremap <leader>y "+yy
 vnoremap <leader>y "+yy
+
+"Copy to end of file
+nnoremap <leader>yG "+yG
+"Copy current line to general clipboard.
+vnoremap <leader>y "+yy
+nnoremap <leader>y "+yy
 "Paste under current line
 nnoremap <leader>p "+p
 vnoremap <leader>p "+p
 "Paste above current line
 nnoremap <leader>P "+P
 vnoremap <leader>P "+P
-
-"Cut text to + clipboard
-vnoremap <leader>d "+d
 
 "Move Left From Actual Window
 nnoremap <leader><Left> <C-w>h
@@ -31,11 +35,18 @@ vnoremap <leader><Up> <C-w>k
 nnoremap <leader><Down> <C-w>j
 vnoremap <leader><Down> <C-w>j
 
-"Move To Next Tab
-nnoremap <leader>t gt
-"Move To Prev Tab
-nnoremap <leader>T gT
+"Removes content from a range, can be (, [,"
+nnoremap <C-c> ci
 
+"Move To Next Tab
+nnoremap <leader>] gt
+"Move To Prev Tab
+nnoremap <leader>[ gT
+
+"Open FuzzyFinder
 nnoremap <leader>f :FZF<CR>
 
-nnoremap <leader>tg :NERDTreeToggle<cr>
+"Toggle NERDTree visibility
+nnoremap <leader>t :NERDTreeToggle<CR>
+"Refresh NERDTree tree
+nnoremap <leader>tr :NERDTreeRefreshRoot<CR>
