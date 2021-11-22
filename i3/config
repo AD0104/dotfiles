@@ -257,6 +257,9 @@ bindsym $mod+b exec brave-browser
 bindsym --release Num_Lock  exec pkill -SIGRTMIN+11 i3blocks
 bindsym --release Caps_Lock exec pkill -SIGRTMIN+11 i3blocks
 
+#Key binding to take screenshots
+bindsym Print exec gnome-screenshot --interactive
+
 #Custom keyboard layouts
 exec_always "setxkbmap -layout us,esp"
 #alt+shift to toggle between the keyboard layouts
