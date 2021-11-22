@@ -50,3 +50,6 @@ nnoremap <leader>f :FZF<CR>
 nnoremap <leader>t :NERDTreeToggle<CR>
 "Refresh NERDTree tree
 nnoremap <leader>tr :NERDTreeRefreshRoot<CR>
+
+" Search and replace word under cursor using F4
+nnoremap <F4> :%s/<c-r><c-w>/<c-r><c-w>/gc<c-f>$F/i
