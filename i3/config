@@ -265,5 +265,7 @@ exec_always "setxkbmap -layout us,esp"
 #alt+shift to toggle between the keyboard layouts
 exec_always "setxkbmap -option 'grp:alt_shift_toggle'"
 
+exec_always conky -c ~/.config/conky/widget-config.conkyrc
+
 #Custom background walllpaper
 exec_always feh --bg-scale /home/main/Pictures/Wallpapers/albedo-wp.jpg

@@ -94,6 +94,6 @@ ${color1}[S]+[LEFT] ${alignr}${color2}Move prv window${color}
 ${color1}[S]+[SHIFT]+q${alignr}${color2}Kill Window${color}
 
 ${color1}${hr}${color}
-${color1}[S]+[SHIFT]+r${alignr}${color2}Restart i3{color}
+${color1}[S]+[SHIFT]+r${alignr}${color2}Restart i3${color}
 ${color1}[S]+[RETURN]${alignr}${color2}i3 Options${color}
 ]];
