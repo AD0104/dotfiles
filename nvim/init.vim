@@ -25,10 +25,22 @@ Plug 'yggdroot/indentline'
 " add this line to your .vimrc file
 Plug 'mattn/emmet-vim'
 
+Plug 'jacoborus/tender.vim'
+Plug 'liuchengxu/space-vim-dark'
+
 call plug#end()
 
-"Vim Airline Config Lines
-let g:airline_theme='ayu_dark'
+set t_ZH=^[[3m
+set t_ZR=^[[23m
 
-colorscheme gruvbox
+"Vim Airline Config Lines
+let g:airline_theme='tender'
+
+set termguicolors
+set cursorline
+autocmd vimenter * highlight CursorLine guibg=Black
+autocmd vimenter * highlight Comment gui=italic
+
+"colorscheme gruvbox
+colorscheme space-vim-dark
 autocmd vimenter * NERDTree

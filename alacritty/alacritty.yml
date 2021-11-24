@@ -15,11 +15,11 @@ font:
     style: Bold
 
   italic:
-    family: CaskaydiaCove NF
+    family: MesloLGS NF 
     style: Italic
 
   bold_italic:
-    family: CaskaydiaCove NF
+    family: MesloLGS NF
     style: Bold Italic
   size: 13.5
 
