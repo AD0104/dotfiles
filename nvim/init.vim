@@ -17,6 +17,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }   
 Plug 'junegunn/fzf'
 Plug 'alvan/vim-closetag'
+Plug 'ap/vim-css-color'
 
 Plug 'neovim/nvim-lspconfig'
 
@@ -30,9 +31,6 @@ Plug 'liuchengxu/space-vim-dark'
 
 call plug#end()
 
-set t_ZH=^[[3m
-set t_ZR=^[[23m
-
 "Vim Airline Config Lines
 let g:airline_theme='tender'
 
@@ -42,5 +40,6 @@ autocmd vimenter * highlight CursorLine guibg=Black
 autocmd vimenter * highlight Comment gui=italic
 
 "colorscheme gruvbox
-colorscheme space-vim-dark
+"colorscheme space-vim-dark
+colorscheme tender
 autocmd vimenter * NERDTree
