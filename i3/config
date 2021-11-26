@@ -265,6 +265,8 @@ bindsym Print exec gnome-screenshot --interactive
 #Open the general control center with the key next to func
 bindsym $mod+Menu exec gnome-control-center
 
+bindsym $mod+p exec flatpak run com.github.alainm23.planner
+
 #Custom keyboard layouts
 exec_always "setxkbmap -layout us,esp"
 #alt+shift to toggle between the keyboard layouts
