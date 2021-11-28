@@ -62,30 +62,12 @@ colors:
     cyan: '#73cef4'
     white: '#feffff'
   key_bindings:
-  - { 
-    key: NumpadAdd,
-    mods: Super,
-    action: IncreaseFontSize 
-    }
-  - {
-    key: NumpadSubtract,
-    mods: Super,
-    action: DecreaseFontSize
-    }
-  - {
-    key: Equals, 
-    mods: Super, 
-    action: ResetFontSize 
-    }
+  - { key: NumpadAdd,         mods: Super,              action: IncreaseFontSize  }
+  - { key: Minus,             mods: Control,            action: IncreaseFontSize  }
+  - { key: NumpadSubtract,    mods: Super,              action: DecreaseFontSize  }
+  - { key: Plus,              mods: Control,            action: DecreaseFontSize  }
+  - { key: Equals,            mods: Super|Control,      action: ResetFontSize     }
   # Not a necessary keybinding in i3   
-  - {
-    key: F11,
-    action: ToggleFullscreen 
-    }
-  - { 
-    key: N, 
-    mods: Control, 
-    action: SpawnNewInstance 
-    }
-
+  - { key: F11,                                         action: ToggleFullscreen  }
+    #  - { key: N,                 mods: Control|Super,      action: SpawnNewInstance }
 print_events: true
