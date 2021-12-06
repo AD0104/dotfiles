@@ -44,7 +44,8 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+#bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec kitty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -158,6 +159,7 @@ workspace $ws10 output $secondary_monitor
 #Forcing Apps to spawn in a certain workspace
 assign [class="Brave-browser"] $ws1
 assign [class="Alacritty"] $ws2
+assign [class="kitty"] $ws2
 assign [class="Code"] $ws2
 assign [class="discord"] $ws3
 assign [class="zoom"] $ws3
