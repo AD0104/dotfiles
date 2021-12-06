@@ -87,13 +87,22 @@ ${color1}[S]+b${alignr}${color2}Open WebBrowser${color}
 ${color1}[S]+m${alignr}${color2}Open Spotify${color}
 ${color1}[S]+[0~9]${alignr}${color2}Select Workspace${color}
 ${color1}[S]+d${alignr}${color2}Open Rofi${color}
+${color1}PrintScreen${alignr}${color2}Take Screenshot${color}
+${color1}[S]+Menu${alignr}${color2}Control Center${color}
+${color1}[S]+p${alignr}${color2}Planner${color}
 
 ${color1}${hr}${color}
-${color1}[S]+[RIGHT] ${alignr}${color2}Move nxt window${color}
-${color1}[S]+[LEFT] ${alignr}${color2}Move prv window${color}
+${color1}[S]+[RIGHT|J] ${alignr}${color2}Move right window${color}
+${color1}[S]+[LEFT] ${alignr}${color2}Move left window${color}
+${color1}[S]+[K] ${alignr}${color2}Move down window${color}
+${color1}[S]+[L] ${alignr}${color2}Move up window${color}
 ${color1}[S]+[SHIFT]+q${alignr}${color2}Kill Window${color}
+${color1}[S]+[W]${alignr}${color2}Tabbed Layout${color}
+${color1}[S]+[E]${alignr}${color2}Default Layout${color}
+${color1}[S]+[SHIFT]+z${alignr}${color2}Lock Screen${color}
 
 ${color1}${hr}${color}
 ${color1}[S]+[SHIFT]+r${alignr}${color2}Restart i3${color}
 ${color1}[S]+[RETURN]${alignr}${color2}i3 Options${color}
+${color1}[S]+[SHIFT]+Space${alignr}${color2}Toggle T/F${color}
 ]];
