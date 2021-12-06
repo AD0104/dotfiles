@@ -280,4 +280,4 @@ exec_always "setxkbmap -option 'grp:alt_space_toggle'"
 exec_always conky -c ~/.config/conky/widget-config.conkyrc
 
 #Custom background walllpaper
-exec_always feh --bg-scale /home/main/Pictures/Wallpapers/albedo-wp.jpg
+exec_always feh --bg-scale /home/main/Pictures/Wallpapers/shingeki-wp.png
