@@ -29,6 +29,8 @@ Plug 'mattn/emmet-vim'
 Plug 'jacoborus/tender.vim'
 Plug 'liuchengxu/space-vim-dark'
 
+Plug 'fladson/vim-kitty'
+
 call plug#end()
 
 "Vim Airline Config Lines
@@ -40,6 +42,6 @@ autocmd vimenter * highlight CursorLine guibg=Black
 autocmd vimenter * highlight Comment gui=italic
 
 "colorscheme gruvbox
-"colorscheme space-vim-dark
-colorscheme tender
+colorscheme space-vim-dark
+"colorscheme tender
 autocmd vimenter * NERDTree
