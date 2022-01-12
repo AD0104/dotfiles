@@ -35,3 +35,5 @@ set colorcolumn=160
 set updatetime=50
 
 set background=dark
+
+set clipboard=unnamedplus
