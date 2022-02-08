@@ -136,4 +136,6 @@ alias py="python3"
 fpath=('~/.bash-functions' $fpath)
 autoload -U ~/.bash-functions/hello
 autoload -U ~/.bash-functions/cpp-run
+autoload -U ~/.bash-functions/create_flask_vars
+autoload -U ~/.bash-functions/activate_venv
 
