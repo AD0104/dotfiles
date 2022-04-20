@@ -146,8 +146,8 @@ bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
 #Monitor variables.
-set $main_monitor HDMI-0
-set $secondary_monitor HDMI-1
+set $main_monitor HDMI-1
+set $secondary_monitor HDMI-2
 
 #Put a workspace in a certain monitor 
 workspace $ws1 output $main_monitor
@@ -229,15 +229,15 @@ bar {
         tray_output $main_monitor
 
         status_command i3blocks -c ~/.config/i3/i3blocks.conf
-        position top
-        
+        position bottom       
+
         colors {
-		background $bg-color
-        separator #757575
-		#                  border             background         text
-		focused_workspace  $bg-color          $bg-color          $text-color
-		inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
-		urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
+            background $bg-color
+            separator #757575
+		#                       border             background         text
+            focused_workspace  $bg-color          $bg-color          $text-color
+            inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
+            urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
 	    }
 }
 # shutdown / restart / suspend...
@@ -256,6 +256,7 @@ mode "$mode_system" {
 bindsym $mod+BackSpace mode "$mode_system"
 
 bindsym $mod+d exec rofi -show run -opacity "85"
+
 #Custom keybindings
 bindsym $mod+shift+z exec i3lock --color "$bg-color"
 bindsym $mod+m exec spotify
@@ -280,4 +281,4 @@ exec_always "setxkbmap -option 'grp:alt_space_toggle'"
 exec_always conky -c ~/.config/conky/widget-config.conkyrc
 
 #Custom background walllpaper
-exec_always feh --bg-scale /home/main/Pictures/Wallpapers/steampunk-waifu.jpg
+exec_always feh --bg-scale /home/main/Pictures/Wallpapers/charging3.png
