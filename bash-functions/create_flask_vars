@@ -1,0 +1,8 @@
+function create_flask_vars(){
+    echo "Exporting FLASK_APP..."
+    export FLASK_APP=main.py
+    echo "Done, new value is: "$FLASK_APP
+    echo "Now exporting Debug mode..."
+    export FLASK_DEBUG=1
+    echo "Done, new value is: "$FLASK_DEBUG
+} 
