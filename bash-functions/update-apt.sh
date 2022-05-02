@@ -5,6 +5,7 @@ sudo apt install dunst feh -y
 sudo apt install arandr lxappearance neofetch -y
 sudo apt install rofi stow -y
 sudo apt install zsh -y
+sudo apt install htop -y
 sudo apt install git -y
 REQUIRED_PKG="git"
 PKG_OK=$(dpkg-query -W --showformat='${Status}\n' $REQUIRED_PKG|grep "install ok installed")
