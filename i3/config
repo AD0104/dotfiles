@@ -275,7 +275,7 @@ bindsym $mod+Menu exec gnome-control-center
 #bindsym $mod+p exec flatpak run com.github.alainm23.planner
 
 #Custom keyboard layouts
-exec_always "setxkbmap -layout us,es"
+exec_always "setxkbmap -layout us,esp"
 #alt+shift to toggle between the keyboard layouts
 exec_always "setxkbmap -option 'grp:alt_space_toggle'"
 
