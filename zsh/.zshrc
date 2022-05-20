@@ -140,3 +140,7 @@ autoload -U ~/.bash-functions/cpp-run
 autoload -U ~/.bash-functions/create_flask_vars
 autoload -U ~/.bash-functions/activate_venv
 
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
