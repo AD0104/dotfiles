@@ -139,7 +139,7 @@ autoload -U ~/.bash-functions/hello
 autoload -U ~/.bash-functions/cpp-run
 autoload -U ~/.bash-functions/create_flask_vars
 autoload -U ~/.bash-functions/activate_venv
-
+autoload -U ~/.bash-functions/add_spanish_layout
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
