@@ -5,4 +5,7 @@ function create_flask_vars(){
     echo "Now exporting Debug mode..."
     export FLASK_DEBUG=1
     echo "Done, new value is: "$FLASK_DEBUG
+    echo "Now changing server to development"
+    export FLASK_ENV=development
+    echo "Done, server is now: "$FLASK_ENV
 } 
