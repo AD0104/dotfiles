@@ -1,4 +1,5 @@
 vim.cmd('noremap <C-b> :noh<cr>:call clearmatches()<cr>') -- clear matches Ctrl+b
+vim.cmd('noremap <SPACE> <Nop>')
 
 function map(mode, shortcut, command)
   vim.api.nvim_set_keymap(mode, shortcut, command, { noremap = true, silent = true })
@@ -23,10 +24,6 @@ end
 function tmap(shortcut, command)
   map('t', shortcut, command)
 end
-
--- sane regexes
-nmap('/', '/\\v')
-vmap('/', '/\\v')
 
 -- don't jump when using *
 nmap('*', '*<c-o>')
@@ -66,6 +63,15 @@ vmap('>', '>gv')
 cmap('<C-a>', '<Home>')
 cmap('<C-e>', '<End>')
 
+--Move between tabs
+nmap('<leader>[', 'gT<CR>')
+nmap('<leader>]', 'gt<CR>')
+
+--Copy/Paste
+nmap('<leader>y', '"*y<CR>')
+nmap('<leader>p', '"*p')
+nmap('<leader>P', '"*P')
+
 -- Terminal
 -- ESC to go to normal mode in terminal
 tmap('<C-s>', '<C-\\><C-n>')
@@ -79,11 +85,8 @@ vim.o.splitright = true -- when splitting vertically, mnove coursor to right pan
 
 -- PLUGINS
 
--- Find files using Telescope command-line sugar.
-nmap("<C-p>", "<cmd>Telescope find_files<cr>")
-nmap("<leader>f", "<cmd>Telescope live_grep<cr>")
-nmap("<leader>bb", "<cmd>Telescope buffers<cr>")
-nmap("<leader>hh", "<cmd>Telescope help_tags<cr>")
+--Fuzy Finder
+nmap('<leader>f','<cmd>FZF<CR>')
 
 -- LSP
 nmap('K', '<cmd>Lspsaga hover_doc<cr>')
@@ -91,5 +94,7 @@ imap('<C-k>', '<cmd>Lspsaga hover_doc<cr>')
 nmap('gh', '<cmd>Lspsaga lsp_finder<cr>')
 nmap('<C-e>', '<cmd>Lspsaga show_line_diagnostics<CR>')
 
--- git
-nmap('<C-g>', '<cmd>GitMessenger<cr>')
+--NvimTree
+nmap('<C-n>', '<cmd>NvimTreeToggle<CR>') --Open/Close Tree
+nmap('<leader>r', '<cmd>NvimTreeRefresh<CR>') --Refresh the Tree
+nmap('<C-f>', '<cmd>NvimTreeFindFile<CR>') --Find File in Tree

@@ -15,14 +15,12 @@ endif
 call plug#begin('~/.local/share/nvim/plugged')
 
 "Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'neovim/nvim-lspconfig'
 Plug 'scrooloose/nerdtree'
 Plug 'morhetz/gruvbox'
 Plug 'airblade/vim-gitgutter'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }   
-Plug 'junegunn/fzf'
 Plug 'alvan/vim-closetag'
 Plug 'ap/vim-css-color'
 
@@ -53,6 +51,3 @@ autocmd vimenter * highlight Comment gui=italic
 colorscheme space-vim-dark
 "colorscheme tender
 autocmd vimenter * NERDTree
-
-lua require'lspconfig'.pyright.setup{}
-"lua require('lua/settings')

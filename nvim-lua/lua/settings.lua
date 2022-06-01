@@ -32,6 +32,7 @@ vim.o.showbreak= '↪' -- character to show when line is broken
 
 -- Sidebar
 vim.o.number = true -- line number on the left
+vim.o.relativenumber = true -- relative line number
 vim.o.numberwidth = 3 -- always reserve 3 spaces for line number
 vim.o.signcolumn = 'yes' -- keep 1 column for coc.vim  check
 vim.o.modelines = 0
@@ -84,9 +85,46 @@ vim.cmd([[
   augroup END
 ]])
 
-vim.o.background = 'dark'
---vim.cmd('colorscheme Tomorrow-Night')
---vim.g.material_style = "palenight"
+-- Clipboard Settings
+vim.opt.clipboard = 'unnamedplus'
 
---vim.g.python3_host_prog = "/Users/grzegorz/.asdf/shims/python3"
---vim.g.python_host_prog = "/Users/grzegorz/.asdf/shims/python2"
+--Git Gutter
+vim.g.gitgutter_enabled=1
+vim.g.gitgutter_signs=1
+vim.g.gitgutter_highlight_lines=0
+vim.g.gitgutter_highlight_linenrs=1
+vim.g.gitgutter_async=1
+
+--Git Gutter Signs
+vim.g.gitgutter_sign_added="+>"
+vim.g.gitgutter_sign_modified="~>"
+vim.g.gitgutter_sign_removed="->"
+vim.g.gitgutter_sign_removed_first_line="^^"
+vim.g.gitgutter_sign_removed_above_and_below="{"
+vim.g.gitgutter_sign_modified_removed="~~"
+
+--Git Gutter Colors
+vim.cmd([[
+    highlight GitGutterAdd guifg=#0e5200
+    highlight GitGutterChange guifg=#fdffb6
+    highlight GitGutterDelete guifg=#f94144
+]])
+
+--VimScript Sets
+vim.cmd([[
+    set updatetime=50
+    set nohlsearch
+    set hidden
+    set mouse=a
+    
+    set colorcolumn=100
+
+    "Auto command to close
+    autocmd! FileType fzf tnoremap <buffer> <leader>q <c-c>
+]])
+
+vim.o.background = 'dark'
+vim.g.material_style = "palenight"
+vim.cmd('colorscheme gruvbox')
+
+vim.g.python3_host_prog = "/bin/python3"
