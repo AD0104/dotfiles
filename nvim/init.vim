@@ -1,7 +1,7 @@
 source ~/.config/nvim/custom-settings/sets.vim
 source ~/.config/nvim/custom-settings/maps.vim
 source ~/.config/nvim/custom-settings/closetags-confs.vim
-source ~/.config/nvim/custom-settings/coc-settings.vim
+"source ~/.config/nvim/custom-settings/coc-settings.vim
 source ~/.config/nvim/custom-settings/gitgutter-settings.vim
 source ~/.config/nvim/custom-settings/indentguides-settings.vim
 
@@ -14,7 +14,8 @@ endif
 " Directorio de plugins
 call plug#begin('~/.local/share/nvim/plugged')
 
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neovim/nvim-lspconfig'
 Plug 'scrooloose/nerdtree'
 Plug 'morhetz/gruvbox'
 Plug 'airblade/vim-gitgutter'
@@ -41,6 +42,7 @@ call plug#end()
 
 "Vim Airline Config Lines
 let g:airline_theme='tender'
+let g:python3_host_prog = '/bin/python3'
 
 set termguicolors
 set cursorline
@@ -51,3 +53,6 @@ autocmd vimenter * highlight Comment gui=italic
 colorscheme space-vim-dark
 "colorscheme tender
 autocmd vimenter * NERDTree
+
+lua require'lspconfig'.pyright.setup{}
+"lua require('lua/settings')
