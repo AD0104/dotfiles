@@ -120,6 +120,7 @@ vim.cmd([[
     set colorcolumn=100
 
     "Auto command to close
+    set clipboard=unnamedplus
     autocmd! FileType fzf tnoremap <buffer> <leader>q <c-c>
 ]])
 

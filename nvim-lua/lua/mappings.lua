@@ -26,7 +26,7 @@ function tmap(shortcut, command)
 end
 
 -- don't jump when using *
-nmap('*', '*<c-o>')
+-- nmap('*', '*<c-o>')
 
 -- keep search matches in the middle of the window
 nmap('n', 'nzzzv')
@@ -68,10 +68,12 @@ nmap('<leader>[', 'gT<CR>')
 nmap('<leader>]', 'gt<CR>')
 
 --Copy/Paste
-nmap('<leader>y', '"*y<CR>')
-nmap('<leader>p', '"*p')
-nmap('<leader>P', '"*P')
-
+vim.api.nvim_set_keymap("n", "<c-c>", '"*y :let @+=@*<CR>', {noremap=true, silent=true})
+vim.api.nvim_set_keymap("n", "<c-v>", '"+p', {noremap=true, silent=true})
+vim.api.nvim_set_keymap("i", "<c-c>", '"*y :let @+=@*<CR>', {noremap=true, silent=true})
+vim.api.nvim_set_keymap("i", "<c-v>", '"+p', {noremap=true, silent=true})
+vim.api.nvim_set_keymap("v", "<c-c>", '"*y :let @+=@*<CR>', {noremap=true, silent=true})
+vim.api.nvim_set_keymap("v", "<c-v>", '"+p', {noremap=true, silent=true})
 -- Terminal
 -- ESC to go to normal mode in terminal
 tmap('<C-s>', '<C-\\><C-n>')

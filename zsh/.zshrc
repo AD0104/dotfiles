@@ -9,6 +9,8 @@ fi
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=$PATH:/opt/netbeans/bin
 export PATH=$PATH:~/Android/Sdk/cmdline-tools/latest/bin
+export JAVA_HOME=/usr/lib/jvm/java-18-openjdk-amd64
+export PATH=$PATH:$JAVA_HOME/bin
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/main/.oh-my-zsh"
