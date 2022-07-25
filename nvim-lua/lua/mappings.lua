@@ -74,6 +74,12 @@ vim.api.nvim_set_keymap("i", "<c-c>", '"*y :let @+=@*<CR>', {noremap=true, silen
 vim.api.nvim_set_keymap("i", "<c-v>", '"+p', {noremap=true, silent=true})
 vim.api.nvim_set_keymap("v", "<c-c>", '"*y :let @+=@*<CR>', {noremap=true, silent=true})
 vim.api.nvim_set_keymap("v", "<c-v>", '"+p', {noremap=true, silent=true})
+
+-- VimComment
+vim.api.nvim_set_keymap("n", "<c-/>", ":CommentToggle<CR>", {noremap=true})
+vim.api.nvim_set_keymap("i", "<c-/>", "<Esc>:CommentToggle<CR>", {noremap=true, silent=true})
+vim.api.nvim_set_keymap("v", "<c-/>", ":CommentToggle<CR>", {noremap=true})
+
 -- Terminal
 -- ESC to go to normal mode in terminal
 tmap('<C-s>', '<C-\\><C-n>')
