@@ -6,7 +6,7 @@ vim.g.maplocalleader = '\\'
 -- basic settings
 vim.o.encoding = "utf-8"
 vim.o.backspace = "indent,eol,start" -- backspace works on every char in insert mode
-vim.o.completeopt = 'menuone,noselect'
+vim.o.completeopt = 'menu,menuone,noselect'
 vim.o.history = 1000
 vim.o.dictionary = '/usr/share/dict/words'
 vim.o.startofline = true
@@ -126,6 +126,6 @@ vim.cmd([[
 
 vim.o.background = 'dark'
 vim.g.material_style = "palenight"
-vim.cmd('colorscheme gruvbox')
+vim.cmd('colorscheme edge')
 
 vim.g.python3_host_prog = "/bin/python3"

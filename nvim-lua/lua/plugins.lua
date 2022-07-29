@@ -62,7 +62,10 @@ return require('packer').startup(function(use)
         'hrsh7th/nvim-cmp',
         'hrsh7th/cmp-nvim-lsp', -- LSP source for nvim-cmp
         'saadparwaiz1/cmp_luasnip', -- Snippets source for nvim-cmp
-        'L3MON4D3/LuaSnip' -- Snippets plugin
+        'L3MON4D3/LuaSnip', -- Snippets plugin
+        'hrsh7th/cmp-buffer',
+        'hrsh7th/cmp-path',
+        'hrsh7th/cmp-cmdline'
     }
     use {
         'nvim-treesitter/nvim-treesitter',
@@ -82,15 +85,18 @@ return require('packer').startup(function(use)
 
     --NVim ColorSchemes.
     use {
-        'morhetz/gruvbox'
+        'morhetz/gruvbox',
+        'sainnhe/edge',
+        'NLKNguyen/papercolor-theme',
+        'sainnhe/sonokai',
     }
-    
+
     -- LuaLine Pluggin
     use {
         'nvim-lualine/lualine.nvim',
         requires = { 'kyazdani42/nvim-web-devicons', opt = true }
     }
-    
+
     --NVim Commentor
     use "terrortylor/nvim-comment"
 
