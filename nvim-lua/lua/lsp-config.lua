@@ -1,4 +1,6 @@
+require("neodev").setup{}
 require("nvim-lsp-installer").setup{}
+local lspconfig = require('lspconfig')
 
 -- Mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
@@ -33,31 +35,32 @@ local on_attach = function(client, bufnr)
     vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
     vim.keymap.set('n', '<space>f', function() vim.lsp.buf.format { async = true } end, bufopts)
 end
-require('lspconfig')['pyright'].setup{
+lspconfig.lua_ls.setup({
+    settings = {
+        Lua = {
+            completion = {
+                callSnippet = "Replace"
+            }
+        }
+    }
+})
+-- lspconfig.lua_ls.setup({
+--     on_attach = on_attach,
+--     require('lua-ls')
+-- })
+lspconfig.pyright.setup({
     on_attach = on_attach,
     require('pyright-config')
-}
-require('lspconfig')['clangd'].setup{
+})
+lspconfig.clangd.setup({
     on_attach = on_attach,
     require('clangd-config')
-}
-require('lspconfig')['jdtls'].setup{
+}) 
+lspconfig.jdtls.setup({
     on_attach = on_attach,
     require('jdtls-config')
-}
-require('lspconfig')['tsserver'].setup{
+}) 
+lspconfig.tsserver.setup({
     on_attach = on_attach,
     require('tsserver-config')
-}
--- Use a loop to conveniently call 'setup' on multiple servers and
--- map buffer local keybindings when the language server attaches
--- local servers = { 'pyright', 'clangd', 'jdtls', 'tsserver', 'eslint' }
--- for _, lsp in pairs(servers) do
---     require('lspconfig')[lsp].setup {
---         on_attach = on_attach,
---         flags = {
---             -- This will be the default in neovim 0.7+
---             debounce_text_changes = 150,
---         }
---     }
--- end
+}) 
