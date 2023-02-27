@@ -1,4 +1,3 @@
-require("neodev").setup{}
 require("nvim-lsp-installer").setup{}
 local lspconfig = require('lspconfig')
 
@@ -36,18 +35,9 @@ local on_attach = function(client, bufnr)
     vim.keymap.set('n', '<space>f', function() vim.lsp.buf.format { async = true } end, bufopts)
 end
 lspconfig.lua_ls.setup({
-    settings = {
-        Lua = {
-            completion = {
-                callSnippet = "Replace"
-            }
-        }
-    }
+    on_attach = on_attach,
+    require('lua-ls')
 })
--- lspconfig.lua_ls.setup({
---     on_attach = on_attach,
---     require('lua-ls')
--- })
 lspconfig.pyright.setup({
     on_attach = on_attach,
     require('pyright-config')

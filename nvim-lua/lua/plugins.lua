@@ -32,18 +32,14 @@ return require('packer').startup(function(use)
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
 
+    -- Another Package Manager
     use "williamboman/mason.nvim"
-    require('mason').setup({
-        PATH = "prepend",   -- "skip" seems to cause the spawning error
-        ui = {
-            icons = {
-                package_installed = "✓",
-                package_pending = "➜",
-                package_uninstalled = "✗"
-            }
-        }
-    })
+    require("mason").setup()
 
+    -- Syntax Highlight
+    use 'nvim-treesitter/nvim-treesitter'
+
+    -- File Tree
     use {
         'kyazdani42/nvim-tree.lua',
         requires = {
@@ -76,11 +72,6 @@ return require('packer').startup(function(use)
         'hrsh7th/cmp-buffer',
         'hrsh7th/cmp-path',
         'hrsh7th/cmp-cmdline'
-    }
-    use "folke/neodev.nvim"
-    use {
-        'nvim-treesitter/nvim-treesitter',
-        run = ':TSUpdate'
     }
     --Git Plug
     use 'airblade/vim-gitgutter'
