@@ -126,6 +126,7 @@ vim.cmd([[
 
 vim.o.background = 'dark'
 vim.g.material_style = "palenight"
+vim.o.showtabline = 2
 vim.cmd('colorscheme edge')
 
 vim.g.python3_host_prog = "/bin/python3"
