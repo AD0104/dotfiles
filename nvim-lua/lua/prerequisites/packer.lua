@@ -1,4 +1,3 @@
---AutoInstall Packer
 local fn = vim.fn
 local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
 if fn.empty(fn.glob(install_path)) > 0 then
@@ -28,16 +27,15 @@ packer.init({
   }
 )
 
+-- Only required if you have packer configured as `opt`
+vim.cmd.packadd('packer.nvim')
+
 return require('packer').startup(function(use)
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
 
-    -- Another Package Manager
-    use "williamboman/mason.nvim"
-    require("mason").setup()
-
     -- Syntax Highlight
-    use 'nvim-treesitter/nvim-treesitter'
+    use({"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"})
 
     -- File Tree
     use {
@@ -47,50 +45,41 @@ return require('packer').startup(function(use)
         },
         tag = 'nightly' -- optional, updated every week. (see issue #1193)
     }
-    --LSP And Snippets Plugs.
-    use{
-        'williamboman/nvim-lsp-installer',
-        {
-            'neovim/nvim-lspconfig',
-            config = function()
-                require('nvim-lsp-installer').setup({
-                    automatic_installation = true, -- automatically detect which servers to install (based on which servers are set up via lspconfig)
-                    ui = {
-                        icons = {
-                            server_installed = "✓",
-                            server_pending = "➜",
-                            server_uninstalled = "✗"
-                        }
-                    }
-                })
-            end
-        },
-        'hrsh7th/nvim-cmp',
-        'hrsh7th/cmp-nvim-lsp', -- LSP source for nvim-cmp
-        'saadparwaiz1/cmp_luasnip', -- Snippets source for nvim-cmp
-        'L3MON4D3/LuaSnip', -- Snippets plugin
-        'hrsh7th/cmp-buffer',
-        'hrsh7th/cmp-path',
-        'hrsh7th/cmp-cmdline'
+
+    use 'nvim-tree/nvim-web-devicons'
+    use {'romgrk/barbar.nvim', requires = 'nvim-web-devicons'}
+
+    --LSP Functionality
+    use {
+        'VonHeikemen/lsp-zero.nvim',
+        branch = 'v1.x',
+        requires = {
+            -- LSP Support
+            {'neovim/nvim-lspconfig'},
+            {'williamboman/mason.nvim'},
+            {'williamboman/mason-lspconfig.nvim'},
+
+            -- Autocompletion
+            {'hrsh7th/nvim-cmp'},
+            {'hrsh7th/cmp-buffer'},
+            {'hrsh7th/cmp-path'},
+            {'saadparwaiz1/cmp_luasnip'},
+            {'hrsh7th/cmp-nvim-lsp'},
+            {'hrsh7th/cmp-nvim-lua'},
+
+            -- Snippets
+            {'L3MON4D3/LuaSnip'},
+            {'rafamadriz/friendly-snippets'},
+        }
     }
-    --Git Plug
-    use 'airblade/vim-gitgutter'
 
     --Fuzzy Finder
     use 'junegunn/fzf'
 
-    --Web Dev. Plugs.
+    --Web Dev
     use {
         'alvan/vim-closetag',
         'ap/vim-css-color'
-    }
-
-    --NVim ColorSchemes.
-    use {
-        'morhetz/gruvbox',
-        'sainnhe/edge',
-        'NLKNguyen/papercolor-theme',
-        'sainnhe/sonokai',
     }
 
     -- LuaLine Pluggin
@@ -102,8 +91,15 @@ return require('packer').startup(function(use)
     --NVim Commentor
     use "terrortylor/nvim-comment"
 
+    --NVim ColorSchemes.
+    use {
+        'morhetz/gruvbox',
+        'sainnhe/edge',
+        'NLKNguyen/papercolor-theme',
+        'sainnhe/sonokai',
+    }
+
     if packer_bootstrap then
         require('packer').sync()
     end
 end)
-
