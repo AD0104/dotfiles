@@ -38,17 +38,16 @@ vim.keymap.set('c', '<C-a>', '<Home>')
 vim.keymap.set('c', '<C-e>', '<End>')
 
 --Move between tabs
-vim.keymap.set({"n","v"}, '<C-[>', 'gT<CR>', { silent=true })
-vim.keymap.set({"n","v"}, '<C-]>', '')
-vim.keymap.set({"n","v"}, '<C-]>', 'gt<CR>')
+-- vim.keymap.set({"n","v"}, '<leader>[', 'gT<CR>', opts)
+-- vim.keymap.set({"n","v"}, '<leader>]', 'gt<CR>', opts)
 
 --Copy/Paste
-vim.keymap.set("n", "<c-c>", '"*y :let @+=@*<CR>', {noremap=true, silent=true})
-vim.keymap.set("n", "<c-v>", '"+p', {noremap=true, silent=true})
-vim.keymap.set("i", "<c-c>", '"*y :let @+=@*<CR>', {noremap=true, silent=true})
-vim.keymap.set("i", "<c-v>", '"+p', {noremap=true, silent=true})
-vim.keymap.set("v", "<c-c>", '"*y :let @+=@*<CR>', {noremap=true, silent=true})
-vim.keymap.set("v", "<c-v>", '"+p', {noremap=true, silent=true})
+vim.keymap.set("n", "<c-c>", '"*y :let @+=@*<CR>', opts)
+vim.keymap.set("n", "<c-v>", '"+p', opts)
+vim.keymap.set("i", "<c-c>", '"*y :let @+=@*<CR>', opts)
+vim.keymap.set("i", "<c-v>", '"+p', opts)
+vim.keymap.set("v", "<c-c>", '"*y :let @+=@*<CR>', opts)
+vim.keymap.set("v", "<c-v>", '"+p', opts)
 
 -- VimComment
 vim.keymap.set("n", "<c-/>", ":CommentToggle<CR>", {noremap=true})
@@ -72,7 +71,7 @@ vim.o.splitright = true -- when splitting vertically, mnove coursor to right pan
 vim.keymap.set('n', '<leader>f','<cmd>FZF<CR>')
 
 -- LSP
-vim.keymap.set('n', 'K', '<cmd>Lspsaga hover_doc<cr>')
+-- vim.keymap.set('n', 'K', '<cmd>Lspsaga hover_doc<cr>')
 vim.keymap.set('i', '<C-k>', '<cmd>Lspsaga hover_doc<cr>')
 vim.keymap.set('n', 'gh', '<cmd>Lspsaga lsp_finder<cr>')
 vim.keymap.set('n', '<C-e>', '<cmd>Lspsaga show_line_diagnostics<CR>')
@@ -86,8 +85,8 @@ vim.keymap.set('n', '<C-f>', '<cmd>NvimTreeFindFile<CR>') --Find File in Tree
 vim.keymap.set("n", "<A-t>", ":$tabnew<CR>", { noremap = true })
 vim.keymap.set("n", "<A-c>", ":tabclose<CR>", { noremap = true })
 vim.keymap.set("n", "<A-o>", ":tabonly<CR>", { noremap = true })
-vim.keymap.set("n", "<A-]>", ":tabn<CR>", { noremap = true })
-vim.keymap.set("n", "<A-[>", ":tabp<CR>", { noremap = true })
+vim.keymap.set("n", "<A-n>", ":tabn<CR>", { noremap = true })
+vim.keymap.set("n", "<A-p>", ":tabp<CR>", { noremap = true })
 -- move current tab to previous position
 vim.keymap.set("n", "<A-left>", ":-tabmove<CR>", { noremap = true })
 -- move current tab to next position

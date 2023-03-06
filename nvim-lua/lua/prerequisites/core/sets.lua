@@ -1,6 +1,6 @@
 HOME = os.getenv("HOME")
 
-local opt = vim.opt 
+local opt = vim.opt
 
 vim.g.mapleader = ' '
 
@@ -45,7 +45,6 @@ opt.ignorecase = true -- ignore letter case when searching
 opt.smartcase = true -- case insentive unless capitals used in search
 
 opt.matchtime = 2 -- delay before showing matching paren
-opt.mps = vim.o.mps .. ",<:>"
 
 -- White characters
 opt.autoindent = true

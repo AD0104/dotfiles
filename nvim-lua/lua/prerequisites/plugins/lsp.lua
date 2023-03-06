@@ -49,17 +49,19 @@ lsp.set_preferences({
 
 lsp.on_attach(function(client, bufnr)
   local opts = {buffer = bufnr, remap = false}
+  local map = vim.keymap
+  local lsp = vim.lsp
 
-  vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
-  vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, opts)
-  vim.keymap.set("n", "<leader>vws", function() vim.lsp.buf.workspace_symbol() end, opts)
-  vim.keymap.set("n", "<leader>vd", function() vim.diagnostic.open_float() end, opts)
-  vim.keymap.set("n", "[d", function() vim.diagnostic.goto_next() end, opts)
-  vim.keymap.set("n", "]d", function() vim.diagnostic.goto_prev() end, opts)
-  vim.keymap.set("n", "<leader>vca", function() vim.lsp.buf.code_action() end, opts)
-  vim.keymap.set("n", "<leader>vrr", function() vim.lsp.buf.references() end, opts)
-  vim.keymap.set("n", "<leader>vrn", function() vim.lsp.buf.rename() end, opts)
-  vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
+  map.set("n", "gd", function() lsp.buf.definition() end, opts)
+  map.set("n", "K", function() lsp.buf.hover() end, opts)
+  map.set("n", "<leader>vws", function() lsp.buf.workspace_symbol() end, opts)
+  map.set("n", "<leader>vd", function() vim.diagnostic.open_float() end, opts)
+  map.set("n", "[d", function() vim.diagnostic.goto_next() end, opts)
+  map.set("n", "]d", function() vim.diagnostic.goto_prev() end, opts)
+  map.set("n", "<leader>vca", function() lsp.buf.code_action() end, opts)
+  map.set("n", "<leader>vrr", function() lsp.buf.references() end, opts)
+  map.set("n", "<leader>vrn", function() lsp.buf.rename() end, opts)
+  map.set("i", "<C-h>", function() lsp.buf.signature_help() end, opts)
 end)
 
 lsp.setup()

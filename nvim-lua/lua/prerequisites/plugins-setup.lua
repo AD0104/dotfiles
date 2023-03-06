@@ -96,6 +96,7 @@ return require('packer').startup(function(use)
         'sainnhe/edge',
         'NLKNguyen/papercolor-theme',
         'sainnhe/sonokai',
+        'jaredgorski/SpaceCamp'
     }
 
     if packer_bootstrap then
