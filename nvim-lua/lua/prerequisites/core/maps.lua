@@ -50,9 +50,9 @@ vim.keymap.set("v", "<c-c>", '"*y :let @+=@*<CR>', opts)
 vim.keymap.set("v", "<c-v>", '"+p', opts)
 
 -- VimComment
-vim.keymap.set("n", "<c-/>", ":CommentToggle<CR>", {noremap=true})
-vim.keymap.set("i", "<c-/>", "<Esc>:CommentToggle<CR>", {noremap=true, silent=true})
-vim.keymap.set("v", "<c-/>", ":CommentToggle<CR>", {noremap=true})
+vim.keymap.set("n", "<leader>/", ":CommentToggle<CR>", {noremap=true})
+vim.keymap.set("i", "<leader>/", "<Esc>:CommentToggle<CR>", {noremap=true, silent=true})
+vim.keymap.set("v", "<leader>/", ":CommentToggle<CR>", {noremap=true})
 
 -- Terminal
 -- ESC to go to normal mode in terminal

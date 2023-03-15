@@ -7,67 +7,66 @@ window:
 
 font:
   normal:
-    family: CaskaydiaCove NF
+    family: CaskaydiaCove Nerd Font
     style: Regular
 
   bold:
-    family: CaskaydiaCove NF
+    family: CaskaydiaCove Nerd Font
     style: Bold
 
   italic:
-    family: MesloLGS NF
+    family: VictorMono Nerd Font
     style: Italic
 
   bold_italic:
-    family: MesloLGS NF
+    family: VictorMono Nerd Font
     style: Bold Italic
-  size: 13.5
+  size: 9
 
 selection:
   save_to_clipboard: true
 
 cursor:
   style:
-    shape: Block
+    shape: Beam
     blinking: Always
     blink_interval: 250
-  
+
 mouse:
   hide_when_typing: false
 
 colors:
+  name: TokyoNight Night
+  author: Folke
   # Default colors
   primary:
-    background: '#282828'
-    foreground: '#eeeeee'
+    background: '0x1a1b26'
+    foreground: '0xc0caf5'
 
   # Normal colors
   normal:
-    black: '#282828'
-    red: '#f43753'
-    green: '#c9d05c'
-    yellow: '#ffc24b'
-    blue: '#b3deef'
-    magenta: '#d3b987'
-    cyan: '#73cef4'
-    white: '#eeeeee'
+    black: '0x15161E'
+    red: '0xf7768e'
+    green: '0x9ece6a'
+    yellow: '0xe0af68'
+    blue: '0x7aa2f7'
+    magenta: '0xbb9af7'
+    cyan: '0x7dcfff'
+    white: '0xa9b1d6'
+
   # Bright colors
   bright:
-    black: '#4c4c4c'
-    red: '#f43753'
-    green: '#c9d05c'
-    yellow: '#ffc24b'
-    blue: '#b3deef'
-    magenta: '#d3b987'
-    cyan: '#73cef4'
-    white: '#feffff'
-  key_bindings:
-  - { key: NumpadAdd,         mods: Super,              action: IncreaseFontSize  }
-  - { key: Minus,             mods: Control,            action: IncreaseFontSize  }
-  - { key: NumpadSubtract,    mods: Super,              action: DecreaseFontSize  }
-  - { key: Plus,              mods: Control,            action: DecreaseFontSize  }
-  - { key: Equals,            mods: Super|Control,      action: ResetFontSize     }
-  # Not a necessary keybinding in i3   
-  - { key: F11,                                         action: ToggleFullscreen  }
-    #  - { key: N,                 mods: Control|Super,      action: SpawnNewInstance }
+    black: '0x414868'
+    red: '0xf7768e'
+    green: '0x9ece6a'
+    yellow: '0xe0af68'
+    blue: '0x7aa2f7'
+    magenta: '0xbb9af7'
+    cyan: '0x7dcfff'
+    white: '0xc0caf5'
+
+  indexed_colors:
+    - { index: 16, color: '0xff9e64' }
+    - { index: 17, color: '0xdb4b4b' }
 print_events: true
+theme: Tokyonight_Night

@@ -62,9 +62,8 @@ opt.undodir = HOME .. '/.vim/tmp/undo//'     -- undo files
 opt.backupdir = HOME .. '/.vim/tmp/backup//' -- backups
 opt.directory = '/.vim/tmp/swap//'   -- swap files
 
-opt.cursorline = true
 opt.termguicolors = true
-opt.background = "dark" 
+opt.background = "dark"
 -- Specify when the line with tab page labels will be displayed.
 opt.showtabline = 2
 
@@ -116,19 +115,21 @@ vim.cmd([[
 
     "Auto command to close
     set clipboard=unnamedplus
-    autocmd! FileType fzf tnoremap <buffer> <leader>q <c-c>
+    autocmd! FileType fzf tnoremap <buffer> <leader>fq <c-c>
+set cursorline
+hi CursorLine term=bold cterm=bold guibg=Grey40
 ]])
 
 -- Only show cursorline in the current window and in normal mode.
-vim.cmd([[
-  augroup cline
-      au!
-      au WinLeave * set nocursorline
-      au WinEnter * set cursorline
-      au InsertEnter * set nocursorline
-      au InsertLeave * set cursorline
-  augroup END
-]])
+-- vim.cmd([[
+--  augroup cline
+--      au!
+--      au WinLeave * set nocursorline
+--      au WinEnter * set cursorline
+--      au InsertEnter * set nocursorline
+--      au InsertLeave * set cursorline
+--  augroup END
+-- ]])
 
 vim.cmd([[
   au FileType python                  set ts=4 sw=4
