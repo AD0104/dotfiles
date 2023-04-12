@@ -50,9 +50,9 @@ vim.keymap.set("v", "<c-c>", '"*y :let @+=@*<CR>', opts)
 vim.keymap.set("v", "<c-v>", '"+p', opts)
 
 -- VimComment
-vim.keymap.set("n", "<leader>/", ":CommentToggle<CR>", {noremap=true})
-vim.keymap.set("i", "<leader>/", "<Esc>:CommentToggle<CR>", {noremap=true, silent=true})
-vim.keymap.set("v", "<leader>/", ":CommentToggle<CR>", {noremap=true})
+vim.keymap.set("n", "<C-/>", ":CommentToggle<CR>", {noremap=true})
+vim.keymap.set("i", "<C-/>", "<Esc>:CommentToggle<CR>", {noremap=true, silent=true})
+vim.keymap.set("v", "<C-/>", ":CommentToggle<CR>", {noremap=true})
 
 -- Terminal
 -- ESC to go to normal mode in terminal
@@ -68,7 +68,13 @@ vim.o.splitright = true -- when splitting vertically, mnove coursor to right pan
 -- PLUGINS
 
 --Fuzy Finder
-vim.keymap.set('n', '<leader>f','<cmd>FZF<CR>')
+--vim.keymap.set('n', '<leader>f','<cmd>FZF<CR>')
+local builtin = require('telescope.builtin')
+vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
+vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
+vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
+vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
+
 
 -- LSP
 -- vim.keymap.set('n', 'K', '<cmd>Lspsaga hover_doc<cr>')

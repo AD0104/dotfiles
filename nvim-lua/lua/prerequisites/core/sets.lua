@@ -4,6 +4,8 @@ local opt = vim.opt
 
 vim.g.mapleader = ' '
 
+vim.g.transparent_enabled = true
+
 -- basic settings
 opt.encoding = "utf-8"
 opt.backspace = "indent,eol,start" -- backspace works on every char in insert mode

@@ -5,15 +5,12 @@ require('nvim-tree').setup ({
     hijack_netrw = true,
     hijack_unnamed_buffer_when_opening = false,
     ignore_buffer_on_setup = false,
-    open_on_setup = true,
-    open_on_setup_file = true,
     open_on_tab = true,
     sort_by = "name",
     update_cwd = false,
     reload_on_bufenter = false,
     view = {
         width = 30,
-        height = 30,
         hide_root_folder = false,
         side = "right",
         preserve_window_proportions = false,
@@ -62,3 +59,5 @@ require('nvim-tree').setup ({
         },
     },
 })
+
+require("nvim-tree.api").tree.open()

@@ -73,8 +73,14 @@ return require('packer').startup(function(use)
     }
 
     --Fuzzy Finder
-    use 'junegunn/fzf'
-
+    -- use 'junegunn/fzf'
+    use {
+        'nvim-telescope/telescope.nvim', tag = '0.1.1',
+        requires = {
+            { 'nvim-lua/plenary.nvim' }
+        }
+    }
+    use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
     --Web Dev
     use {
         'alvan/vim-closetag',
@@ -98,6 +104,9 @@ return require('packer').startup(function(use)
         'sainnhe/sonokai',
         'jaredgorski/SpaceCamp'
     }
+
+    -- Make Nvim Background Transparent
+    use "xiyaowong/nvim-transparent"
 
     if packer_bootstrap then
         require('packer').sync()
