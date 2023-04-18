@@ -13,7 +13,7 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 #export PATH=$PATH:$JAVA_HOME/bin
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/main/.oh-my-zsh"
+export ZSH="/home/urban/.oh-my-zsh"
 export TERM="xterm-256color"
 
 # Set name of the theme to load --- if set to "random", it will
