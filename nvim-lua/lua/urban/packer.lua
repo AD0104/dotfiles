@@ -1,13 +1,16 @@
 local fn = vim.fn
+
 local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
+
 if fn.empty(fn.glob(install_path)) > 0 then
   packer_bootstrap = fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
 end
+
 -- Autocommand that reloads neovim whenever you save the plugins.lua file
 vim.cmd([[
   augroup packer_user_config
     autocmd!
-    autocmd BufWritePost plugins-setup.lua source <afile> | PackerSync
+    autocmd BufWritePost packer.lua source <afile> | PackerSync
   augroup end
 ]])
 
@@ -46,7 +49,10 @@ return require('packer').startup(function(use)
         tag = 'nightly' -- optional, updated every week. (see issue #1193)
     }
 
-    use 'nanozuki/tabby.nvim'
+    use {
+        'romgrk/barbar.nvim',
+        requires = 'kyazdani42/nvim-web-devicons'
+    }
 
     --LSP Functionality
     use {
@@ -73,14 +79,17 @@ return require('packer').startup(function(use)
     }
 
     --Fuzzy Finder
-    -- use 'junegunn/fzf'
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.1',
         requires = {
             { 'nvim-lua/plenary.nvim' }
         }
     }
-    use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
+    use {
+        'nvim-telescope/telescope-fzf-native.nvim',
+        run = 'make'
+    }
+
     --Web Dev
     use {
         'alvan/vim-closetag',
@@ -90,7 +99,10 @@ return require('packer').startup(function(use)
     -- LuaLine Pluggin
     use {
         'nvim-lualine/lualine.nvim',
-        requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+        requires = {
+            'kyazdani42/nvim-web-devicons',
+            opt = true
+        }
     }
 
     --NVim Commentor
@@ -102,7 +114,9 @@ return require('packer').startup(function(use)
         'sainnhe/edge',
         'NLKNguyen/papercolor-theme',
         'sainnhe/sonokai',
-        'jaredgorski/SpaceCamp'
+        'jaredgorski/SpaceCamp',
+        'folke/tokyonight.nvim',
+        "catppuccin/nvim", as = "catppuccin"
     }
 
     -- Make Nvim Background Transparent
