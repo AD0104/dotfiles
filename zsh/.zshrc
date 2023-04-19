@@ -6,7 +6,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:~/.local/bin:$PATH
 #export PATH=$PATH:/opt/netbeans/bin
 #export PATH=$PATH:~/Android/Sdk/cmdline-tools/latest/bin
 #export JAVA_HOME=/usr/lib/jvm/java-18-openjdk-amd64

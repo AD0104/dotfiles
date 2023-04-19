@@ -69,3 +69,14 @@ lsp.setup()
 vim.diagnostic.config({
     virtual_text = true
 })
+
+local lspconfig = require('lspconfig')
+local MY_FQBN = "arduino:avr:nano"
+lspconfig.arduino_language_server.setup {
+    cmd = {
+        "arduino-language-server",
+        "-cli-config", "~/.local/bin/arduino-cli",
+        "-fqbn",
+        MY_FQBN
+    }
+}

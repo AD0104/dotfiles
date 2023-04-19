@@ -1,6 +1,9 @@
 env:
   TERM: xterm-256color
 
+import:
+  - ~/.config/alacritty/alacritty-kb/key-bindings.yml
+
 window:
   title: Alacritty
   dynamic_title: false
