@@ -12,6 +12,8 @@ kmp.set('n', "<leader>?", ":execute 'vimgrep /'.@/.'/g %'<CR>:copen<CR>")
 -- Jump To Beggining & End Of Line
 kmp.set('n', 'H', '^')
 kmp.set('n', 'L', 'g_')
+kmp.set('v', 'H', '^')
+kmp.set('v', 'L', 'g_')
 
 -- Moving With Wrap On
 kmp.set('n', 'j', 'gj')
