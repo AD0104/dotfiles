@@ -122,6 +122,8 @@ return require('packer').startup(function(use)
     -- Make Nvim Background Transparent
     use "xiyaowong/nvim-transparent"
 
+    --HTML Integration With Emmet
+    use "mattn/emmet-vim"
     if packer_bootstrap then
         require('packer').sync()
     end

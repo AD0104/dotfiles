@@ -7,10 +7,14 @@ fi
 
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:~/.local/bin:$PATH
+#Flutter export
+export PATH=$PATH:~/.local/share/flutter/bin/
 #export PATH=$PATH:/opt/netbeans/bin
 #export PATH=$PATH:~/Android/Sdk/cmdline-tools/latest/bin
-#export JAVA_HOME=/usr/lib/jvm/java-18-openjdk-amd64
-#export PATH=$PATH:$JAVA_HOME/bin
+export JAVA_HOME=/usr/lib/jvm/java-17-openjdk/
+export PATH=$PATH:$JAVA_HOME/bin
+#Maven Export
+export PATH=$PATH:~/.local/share/apache-maven-3.9.1/bin/
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/urban/.oh-my-zsh"
@@ -140,9 +144,13 @@ fpath=('~/.bash-functions' $fpath)
 autoload -U ~/.bash-functions/hello
 autoload -U ~/.bash-functions/cpp-run
 autoload -U ~/.bash-functions/create_flask_vars
-autoload -U ~/.bash-functions/activate_venv
+autoload -U ~/.bash-functions/create_venv
 autoload -U ~/.bash-functions/add_spanish_layout
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)
