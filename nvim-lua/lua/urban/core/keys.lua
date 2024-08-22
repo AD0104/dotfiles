@@ -57,13 +57,6 @@ kmp.set('n', '<C-b>', '<cmd>NvimTreeToggle<CR>')      --Open/Close Tree
 kmp.set('n', '<leader>r', '<cmd>NvimTreeRefresh<CR>') --Refresh the Tree
 kmp.set('n', '<C-f>', '<cmd>NvimTreeFindFile<CR>')    --Find File in Tree
 
--- Telescope
-local tlcp = require("telescope.builtin")
-kmp.set('n', '<leader>ff', tlcp.find_files, opts)
-kmp.set('n', '<leader>fg', tlcp.live_grep, opts)
-kmp.set('n', '<leader>fb', tlcp.buffers, opts)
-kmp.set('n', '<leader>fh', tlcp.help_tags, opts)
-
 -- Tabs
 -- Move to previous/next
 kmp.set('n', '<leader>[', '<Cmd>BufferPrevious<CR>', opts)

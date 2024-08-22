@@ -19,6 +19,7 @@ opt.iskeyword:append("-")
 opt.clipboard:append("unnamedplus")
 opt.cursorline = true
 opt.cursorlineopt = "line"
+opt.termguicolors = true
 
 
 -- Key Map Time Out
