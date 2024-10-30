@@ -145,9 +145,19 @@ bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
-#Monitor variables.
+# Display Variables.
+# Desktop Settings
 set $main_monitor HDMI-0
 set $secondary_monitor HDMI-1
+# With Graphics On
+# set $secondary_monitor HDMI-A-1-0
+
+# Laptops Settings
+# With Graphics Card Off
+# set $main_monitor eDP-1
+# With Graphics Card On
+# set $main_monitor eDP-1-0
+
 
 #Put a workspace in a certain monitor 
 workspace $ws1 output $main_monitor
@@ -280,6 +290,7 @@ exec_always "setxkbmap -layout us,esp"
 exec_always "setxkbmap -option 'grp:alt_space_toggle'"
 
 exec_always conky -c ~/.config/conky/widget-config.conkyrc
+exec_always copyq
 
 #Custom background walllpaper
 exec_always feh --bg-scale /home/main/Pictures/Wallpapers/charging3.png
