@@ -10,7 +10,11 @@ if not telescope_actions_status then
   return
 end
 
-telescope.setup {}
+telescope.setup {
+    defaults = {
+        file_ignore_patterns = { "ng_modules", "target" }
+    }
+}
 telescope.load_extension("fzf")
 
 local builtin = require('telescope.builtin')
