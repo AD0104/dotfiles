@@ -42,16 +42,15 @@ return require('packer').startup(function(use)
 
     -- File Tree
     use {
-        'kyazdani42/nvim-tree.lua',
+        'nvim-tree/nvim-tree.lua',
         requires = {
-            'kyazdani42/nvim-web-devicons', -- optional, for file icon
+            'nvim-tree/nvim-web-devicons', -- optional, for file icon
         },
-        tag = 'nightly' -- optional, updated every week. (see issue #1193)
     }
 
     use {
         'romgrk/barbar.nvim',
-        requires = 'kyazdani42/nvim-web-devicons'
+        requires = 'nvim-tree/nvim-web-devicons'
     }
 
     --LSP Functionality
@@ -80,14 +79,22 @@ return require('packer').startup(function(use)
 
     --Fuzzy Finder
     use {
-        'nvim-telescope/telescope.nvim', tag = '0.1.8',
+        'nvim-telescope/telescope-fzf-native.nvim',
+        run = 'make'
+    }
+    use {
+        'nvim-telescope/telescope.nvim', 
+        tag = '0.1.8',
+        dependencies = {
+            "nvim-telescope/telescope-fzf-native.nvim",
+            build = "make",
+            config = function()
+                require("telescope").load_extension("fzf")
+            end,
+        },
         requires = {
             { 'nvim-lua/plenary.nvim' }
         }
-    }
-    use {
-        'nvim-telescope/telescope-fzf-native.nvim',
-        run = 'make'
     }
 
     --Web Dev
@@ -100,7 +107,7 @@ return require('packer').startup(function(use)
     use {
         'nvim-lualine/lualine.nvim',
         requires = {
-            'kyazdani42/nvim-web-devicons',
+            'nvim-tree/nvim-web-devicons',
             opt = true
         }
     }
