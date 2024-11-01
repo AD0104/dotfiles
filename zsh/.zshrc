@@ -11,7 +11,7 @@ export PATH=$HOME/bin:/usr/local/bin:~/.local/bin:$PATH
 export PATH=$PATH:~/.local/share/flutter/bin/
 #export PATH=$PATH:/opt/netbeans/bin
 #export PATH=$PATH:~/Android/Sdk/cmdline-tools/latest/bin
-export JAVA_HOME=/usr/lib/jvm/java-17-openjdk/
+export JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64/
 export PATH=$PATH:$JAVA_HOME/bin
 #Maven Export
 export PATH=$PATH:~/.local/share/apache-maven-3.9.1/bin/
