@@ -15,6 +15,7 @@ export JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64/
 export PATH=$PATH:$JAVA_HOME/bin
 #Maven Export
 export PATH=$PATH:~/.local/share/apache-maven-3.9.1/bin/
+export JDTLS_JVM_ARGS="-javaagent:$HOME/.local/share/java/lombok.jar"
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/urban/.oh-my-zsh"
@@ -146,6 +147,7 @@ autoload -U ~/.bash-functions/cpp-run
 autoload -U ~/.bash-functions/create_flask_vars
 autoload -U ~/.bash-functions/create_venv
 autoload -U ~/.bash-functions/add_spanish_layout
+autoload -U ~/.bash-functions/tmux_detached_custom_name.sh
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

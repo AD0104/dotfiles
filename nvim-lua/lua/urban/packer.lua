@@ -23,9 +23,9 @@ end
 -- Have packer use a popup window
 packer.init({
     display = {
-      open_fn = function()
-        return require('packer.util').float({ border = 'single' })
-      end
+        open_fn = function()
+            return require('packer.util').float({ border = 'single' })
+        end
     }
   }
 )
@@ -125,6 +125,8 @@ return require('packer').startup(function(use)
         'folke/tokyonight.nvim',
         "catppuccin/nvim", as = "catppuccin"
     }
+
+    use "lukas-reineke/indent-blankline.nvim"
 
     -- Make Nvim Background Transparent
     use "xiyaowong/nvim-transparent"
